@@ -4,9 +4,17 @@ import flux from "../flux";
 import Child from "../components/Child";
 
 const Parent = React.createClass({
-  displayName: "School",
+  displayName: "Parent",
 
   render() {
+    if (!this.props.parent) {
+      console.log("Parent.render", "waiting...");
+
+      return <span>Waiting on <code>parent</code>...</span>;
+    }
+
+    console.log("Parent.render", "rendering...");
+
     return (
       <div>
         <h1>{this.props.parent.val}</h1>
@@ -23,6 +31,7 @@ export default flux.createContainer(Parent, {
       ParentActions.fetch();
     },
   },
+
   stores: {
     Parent: function(ParentStore) {
       return {
