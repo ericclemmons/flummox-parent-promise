@@ -2,16 +2,14 @@ import { Actions } from "flummox";
 
 export default class ParentActions extends Actions {
   fetch(slug) {
-    // return {
-    //   val: 'Parent Value'
-    // };
+    console.log("ParentActions.fetch", "start");
+
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        console.log('Parent Async Resolved');
-        resolve({
-          val: 'Parent Value'
-        });
-      },4000)
+        console.log("ParentActions.fetch", "finish");
+
+        resolve({ val: "Parent Value" });
+      }, 1000);
     });
   }
 }

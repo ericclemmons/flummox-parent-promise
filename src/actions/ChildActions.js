@@ -2,17 +2,14 @@ import { Actions } from "flummox";
 
 export default class ChildActions extends Actions {
   fetch(slug) {
-    // return {
-    //   val: 'Child Value'
-    // };
-    console.log('Child Async Begin');
-    return new Promise((resolve, reject) => {
+    console.log("ChildActions.fetch", "start");
+
+    return new Promise((resolve) => {
       setTimeout(() => {
-        console.log('Child Async Resolved');
-        resolve({
-          val: 'Child Value'
-        });
-      },2000)
+        console.log("ChildActions.fetch", "finish");
+
+        resolve({ val: 'Child Value' });
+      }, 500)
     });
   }
 }
