@@ -8,6 +8,6 @@ const flux = new Flux();
 
 React.render((
   <FluxComponent flux={flux}>
-    <Parent/>
+    <Parent />
   </FluxComponent>
 ), document.getElementById('app'));
