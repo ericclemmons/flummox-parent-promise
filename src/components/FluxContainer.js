@@ -4,13 +4,9 @@ import FluxComponent from "flummox/component";
 import React from "react";
 
 const log = function(self, method, data) {
-  console.table([
-    {
-      component: self.props.component.displayName,
-      method: method,
-      data: data,
-    }
-  ]);
+  console.log.apply(console, [
+    `${self.props.component.displayName}Container.${method}`,
+  ].concat(Array.prototype.slice.call(arguments, 2)));
 };
 
 export default React.createClass({
