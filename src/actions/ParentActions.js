@@ -1,12 +1,6 @@
 import { Actions } from "flummox";
 
 export default class ParentActions extends Actions {
-  constructor(flux) {
-    super();
-
-    this.flux = flux;
-  }
-
   fetch(slug) {
     // return {
     //   val: 'Parent Value'

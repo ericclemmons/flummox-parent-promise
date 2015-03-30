@@ -11,8 +11,8 @@ class Flux extends Flummox {
   constructor() {
     super();
 
-    this.createActions("Parent", ParentActions, this);
-    this.createActions("Child", ChildActions, this);
+    this.createActions("Parent", ParentActions);
+    this.createActions("Child", ChildActions);
 
     this.createStore("Parent", ParentStore, this);
     this.createStore("Child", ChildStore, this);
