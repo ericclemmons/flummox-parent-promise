@@ -13,6 +13,7 @@
     "babel-core": "^4.7.16",
     "babel-loader": "^4.2.0",
     "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
     "concat-stream": "^1.4.7",
     "cuid": "^1.2.4",
     "debug": "^2.1.3",
