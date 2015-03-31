@@ -19,7 +19,7 @@ export default React.createClass({
   componentWillMount() {
     log(this, "componentWillMount");
 
-    this.runActions(this.props.actions);
+    setTimeout(this.runActions.bind(this, this.props.actions), 0);
   },
 
   render() {
