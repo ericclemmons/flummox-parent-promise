@@ -14,7 +14,6 @@ class ChildStore extends Store {
   }
 
   onFetch(data) {
-    console.log("I DON'T FIRE WHEN PARENT COMPONENT IS ASYNC!");
     this.setState(data);
   }
 }
